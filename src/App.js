@@ -1,8 +1,15 @@
 /* @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { FaPhone } from 'react-icons/fa';
+import { ReactComponent as Facebook } from './images/facebook.svg';
+import { ReactComponent as Insta } from './images/insta.svg';
+import { ReactComponent as Phone } from './images/iPhone.svg';
+import { ReactComponent as Laptop } from './images/laptop.svg';
+import { ReactComponent as Linkedin } from './images/linkedin.svg';
 import { ReactComponent as Logo } from './images/logo.svg';
 import { ReactComponent as SquareFoot } from './images/squarefoot.svg';
 import { ReactComponent as Table } from './images/table.svg';
+import { ReactComponent as Twitter } from './images/twitter.svg';
 
 const wrapperStyles = css`
   max-width: 1440px;
@@ -69,6 +76,13 @@ const paragraphStyles = css`
     color: #fff;
   }
 `;
+
+const phoneIconStyles = css`
+  margin-right: 5px;
+  width: 14px;
+  height: 146px;
+`;
+
 const firstSectionContainerStyles = css`
   display: flex;
   flex-direction: column;
@@ -92,10 +106,7 @@ const pictureInDivStyles = css`
   display: flex;
   justify-content: center;
 `;
-/* const flowHidden = css`
-  width: 100%;
-  overflow: hidden;
-`; */
+
 const textDivStyles = css`
   display: flex;
   flex-direction: column;
@@ -178,7 +189,130 @@ const innerContainerStyles = css`
     color: #ff5050;
   }
 `;
+const sectionThreeColor = css`
+  background-color: #fafafa;
+  overflow: hidden;
+`;
+const sectionThreeStyles = css`
+  padding: 96px 48px;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+`;
 
+const divPhoneStyles = css`
+  transform: translateX(0);
+  height: 492px;
+  background-position-x: -40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 1s;
+`;
+
+const button = css`
+  display: block;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+  width: 168px;
+  text-decoration: none;
+  background-color: #ff5050;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+`;
+
+const sectionThreeParagraphStyles = css`
+  display: inline-block;
+  vertical-align: top;
+`;
+
+const sectionThreeInnerContainerStyles = css`
+  margin: auto;
+  max-width: 250px;
+  h3 {
+    letter-spacing: -1px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #004f8a;
+    margin-bottom: 24px;
+  }
+  p {
+    margin: 24px 0;
+    line-height: 1.7;
+  }
+  a {
+    text-decoration: none;
+    border-bottom: 2px solid #ff5050;
+    padding-bottom: 4px;
+  }
+`;
+const divLaptopStyles = css`
+  transform: translateX(0);
+  width: 720px;
+  height: 501px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 1s;
+`;
+
+/* FOOTER CSS */
+
+const footerFlex = css`
+  display: flex;
+  flex-direction: row;
+  padding: 48px;
+  margin: auto;
+  max-width: 1440px;
+  width: 100%;
+`;
+
+const footerContainerFlex = css`
+  display: flex;
+  flex: 2 1;
+`;
+
+const footerAddressStyle = css`
+  flex: 1 1;
+  font-style: inherit;
+  line-height: 1.9;
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+  ul {
+    margin-top: 16px;
+    list-style: none;
+    margin-bottom: 28px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding: 0px;
+  }
+`;
+
+const footerIconListStyles = css`
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 16px;
+  padding: 0.25rem 0;
+`;
+
+const anchorFooterStyles = css`
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+`;
 function App() {
   return (
     <>
@@ -205,6 +339,9 @@ function App() {
             </li>
             <li>
               <a href="tel:+19179092953">
+                <span css={phoneIconStyles}>
+                  <FaPhone />
+                </span>
                 <span>(917) 909-2953</span>
               </a>
             </li>
@@ -284,8 +421,161 @@ function App() {
             </div>
           </section>
           {/* Third Main Section  with Blockquote and Picture*/}
+          <section css={sectionThreeColor}>
+            <div className="inset-layout" css={sectionThreeStyles}>
+              <div className="iphone" css={divPhoneStyles}>
+                <picture>
+                  <Phone />
+                </picture>
+              </div>
+              <div className="container" css={sectionThreeParagraphStyles}>
+                <div
+                  className="inner-style"
+                  css={sectionThreeInnerContainerStyles}
+                >
+                  <h3>Not your ordinary broker.</h3>
+                  <p>
+                    Work with SquareFoot brokers who help you to get started
+                    with smart tools to handle every facet of your search, from
+                    negotiating a lease, to finding an interior designer.
+                  </p>
+                  <a href="/#">
+                    <button css={button}>Get Started</button>
+                  </a>
+                </div>
+              </div>
+              <div className="laptop" css={divLaptopStyles}>
+                <picture>
+                  <Laptop />
+                </picture>
+              </div>
+            </div>
+          </section>
         </section>
       </main>
+      <footer>
+        <div className="upper">
+          <div className="innerFlex" css={footerFlex}>
+            <div className="innerContainer-left" css={footerContainerFlex}>
+              <address css={footerAddressStyle}>
+                <h2>SquareFoot HQ</h2>
+                <p>
+                  <a href="tel:+9179092953" css={anchorFooterStyles}>
+                    <span>(917) 909-2953</span>
+                  </a>
+                  <br />
+                  115 W 30th Street, Suite 900
+                  <br /> New York City, NY 10001
+                </p>
+                <ul>
+                  <li css={footerIconListStyles}>
+                    <a href="/#">
+                      <Facebook />
+                    </a>
+                  </li>
+                  <li css={footerIconListStyles}>
+                    <a href="/#">
+                      <Twitter />
+                    </a>
+                  </li>
+                  <li css={footerIconListStyles}>
+                    <a href="/#">
+                      <Insta />
+                    </a>
+                  </li>
+                  <li css={footerIconListStyles}>
+                    <a href="/#">
+                      <Linkedin />
+                    </a>
+                  </li>
+                </ul>
+              </address>
+              <nav css={footerAddressStyle}>
+                <h2>Company</h2>
+                <ul>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Clients
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Team
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Blog
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="innerContainer-right" css={footerContainerFlex}>
+              <nav css={footerAddressStyle}>
+                <h2>Resources</h2>
+                <ul>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Space Calculator
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Commute Calculator
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Leasopedia
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Office Search Guide
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Move in Services
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <nav css={footerAddressStyle}>
+                <h2>Connect</h2>
+                <ul>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Contact
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Careers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      Referral
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" css={anchorFooterStyles}>
+                      List Your Property
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
