@@ -83,6 +83,8 @@ const phoneIconStyles = css`
   height: 146px;
 `;
 
+/* FIRST SECTION CSS */
+
 const firstSectionContainerStyles = css`
   display: flex;
   flex-direction: column;
@@ -134,6 +136,8 @@ const textDivStyles = css`
     font-size: 0.875rem;
   }
 `;
+
+/* SECOND SECTION CSS */
 
 const sectionTwoStyles = css`
   padding: 96px 48px;
@@ -189,6 +193,9 @@ const innerContainerStyles = css`
     color: #ff5050;
   }
 `;
+
+/* THIRD SECTION CSS */
+
 const sectionThreeColor = css`
   background-color: #fafafa;
   overflow: hidden;
@@ -313,9 +320,11 @@ const anchorFooterStyles = css`
   color: #000;
   cursor: pointer;
 `;
+
 function App() {
   return (
     <>
+      {/* HEADER */}
       <header css={wrapperStyles}>
         <section css={headerStyles}>
           <a href="/#" css={logoImageStyles}>
@@ -348,6 +357,7 @@ function App() {
           </ul>
         </section>
       </header>
+      {/* MAIN */}
       <main css={mainMarginStyles}>
         {/* Banner Section with Blue Background */}
         <section>
@@ -453,6 +463,7 @@ function App() {
           </section>
         </section>
       </main>
+      {/* FOOTER */}
       <footer>
         <div className="upper">
           <div className="innerFlex" css={footerFlex}>
