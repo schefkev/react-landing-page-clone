@@ -284,7 +284,6 @@ function App() {
             </div>
           </section>
           {/* Third Main Section  with Blockquote and Picture*/}
-          <section></section>
         </section>
       </main>
     </>
